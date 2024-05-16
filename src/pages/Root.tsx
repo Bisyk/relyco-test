@@ -6,7 +6,7 @@ const RootLayout = () => {
       <header>
         <nav className="w-full h-16 bg-yellow-400 flex items-center px-8">
           <Link to="/">
-            <h1 className="text-3xl font-bold">relyco-test</h1>
+            <h1 className="text-3xl font-bold">Rick and Morty</h1>
           </Link>
         </nav>
       </header>
