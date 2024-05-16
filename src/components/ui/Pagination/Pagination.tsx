@@ -17,7 +17,6 @@ const Pagintaion = ({
 }: PaginationProps) => {
   return (
     <div>
-      {" "}
       <div className="flex justify-center gap-4">
         <button
           onClick={handlePrevPage}

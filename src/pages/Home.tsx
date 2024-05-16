@@ -77,6 +77,9 @@ const HomePage = () => {
     }
   };
 
+  console.log(data);
+  console.log(info);
+
   return (
     <>
       <div className="px-8 mb-4 flex mr-2 flex-col lg:flex-row gap-4">
@@ -103,14 +106,16 @@ const HomePage = () => {
         sortedData={sortedData}
         handleActiceCharacterSelect={handleActiceCharacterSelect}
       />
-      <Pagintaion
-        handlePrevPage={handlePrevPage}
-        handleNextPage={handleNextPage}
-        currentPage={currentPage}
-        infoPrev={info.prev}
-        infoNext={info.next}
-        totalPages={info.pages}
-      />
+      {!error && (
+        <Pagintaion
+          handlePrevPage={handlePrevPage}
+          handleNextPage={handleNextPage}
+          currentPage={currentPage}
+          infoPrev={info.prev}
+          infoNext={info.next}
+          totalPages={info.pages}
+        />
+      )}
     </>
   );
 };
