@@ -77,9 +77,6 @@ const HomePage = () => {
     }
   };
 
-  console.log(data);
-  console.log(info);
-
   return (
     <>
       <div className="px-8 mb-4 flex mr-2 flex-col lg:flex-row gap-4">
