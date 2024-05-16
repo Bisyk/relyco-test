@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ModalState = {
   isOpen: boolean;
@@ -8,6 +8,10 @@ type ModalState = {
 
 export const useModal = (): ModalState => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   const handleOpen = () => {
     setIsOpen(true);
